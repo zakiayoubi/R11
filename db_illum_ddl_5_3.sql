@@ -38,20 +38,20 @@ CONSTRAINT Assign_empId_fk FOREIGN KEY(empId) REFERENCES Worker(empId) ON DELETE
 INSERT INTO Dept VALUES ('Accounting',null);
 INSERT INTO Dept VALUES ('Research',null);
 
-INSERT INTO Worker VALUES(101,'Smith','Tom', 'Accounting', '01-Feb-1970', '06-Jun-1993 ',50000);
-INSERT INTO Worker VALUES(103,'Jones','Mary','Accounting', '15-Jun-1975', '20-Sep-2005',48000);
-INSERT INTO Worker VALUES(105,'Burns','Jane','Accounting', '21-Sep-1980', '12-Jun-2015',39000);
-INSERT INTO Worker VALUES(110,'Burns','Michael', 'Research', '05-Apr-1977', '10-Sep-2020',70000);
-INSERT INTO Worker VALUES(115,'Chin','Amanda', 'Research', '22-Sep-1980', '19-Jun-2022',60000);
+INSERT INTO Worker VALUES(101,'Smith','Tom', 'Accounting', '1970- 01-Feb', '1993-Jun-06',50000);
+INSERT INTO Worker VALUES(103,'Jones','Mary','Accounting', '1975-Jun-15', '2005-Sep-20',48000);
+INSERT INTO Worker VALUES(105,'Burns','Jane','Accounting', '1980-Sep-21', '2015-Jun-12',39000);
+INSERT INTO Worker VALUES(110,'Burns','Michael', 'Research', '1977-Apr-02', '2020-Sep-10',70000);
+INSERT INTO Worker VALUES(115,'Chin','Amanda', 'Research', '1980-Sep-22', '2022-Jun-19',60000);
 
 UPDATE Dept SET mgrId = 101 WHERE deptName = 'Accounting';
 UPDATE Dept SET mgrId = 110 WHERE deptName = 'Research';	
 
-INSERT INTO Project VALUES (1001, 'Jupiter', 101, 300000, '01-Feb-2021', 50);
-INSERT INTO Project VALUES (1005, 'Saturn', 101, 400000, '01-Jun-2022', 35);
-INSERT INTO Project VALUES (1019, 'Mercury', 110, 350000, '15-Feb-2022', 40);
-INSERT INTO Project VALUES (1025, 'Neptune', 110, 600000, '01-Feb-2021', 45);
-INSERT INTO Project VALUES (1030, 'Pluto', 110, 380000, '15-Sep-2023', 50);
+INSERT INTO Project VALUES (1001, 'Jupiter', 101, 300000, '2021-Feb-01', 50);
+INSERT INTO Project VALUES (1005, 'Saturn', 101, 400000, '2022-Jun-01', 35);
+INSERT INTO Project VALUES (1019, 'Mercury', 110, 350000, '2022-Feb-05', 40);
+INSERT INTO Project VALUES (1025, 'Neptune', 110, 600000, '2021-Feb-01', 45);
+INSERT INTO Project VALUES (1030, 'Pluto', 110, 380000, '2023-Sep-15', 50);
 
 INSERT INTO Assign VALUES(1001, 101, 30,null);
 INSERT INTO Assign VALUES(1001, 103, 20,5);
